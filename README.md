@@ -13,7 +13,7 @@
 | 민서 | [@alstjgg](https://github.com/alstjgg) |
 | 상우 | [@highright96](https://github.com/highright96) |
 | 지혁 |  |
-| 진영 |  |
+| 진영 | [@pjy1368](https://github.com/pjy1368) |
 
 ## 📌 참고 자료
 스터디의 주제는 아래 자료들을 참고합니다
