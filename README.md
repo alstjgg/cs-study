@@ -12,7 +12,7 @@
 | ---- | ---------------------------------------------- |
 | 민서 | [@alstjgg](https://github.com/alstjgg) |
 | 상우 | [@highright96](https://github.com/highright96) |
-| 지혁 |  |
+| 지혁 | [@landturtler](https://github.com/landturtler)|
 | 진영 | [@pjy1368](https://github.com/pjy1368) |
 
 ## 📌 참고 자료
