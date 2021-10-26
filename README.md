@@ -11,7 +11,7 @@
 | 이름   | GitHub                                         |
 | ---- | ---------------------------------------------- |
 | 민서 | [@alstjgg](https://github.com/alstjgg) |
-| 상우 |  |
+| 상우 | [@highright96](https://github.com/highright96) |
 | 지혁 |  |
 | 진영 |  |
 
