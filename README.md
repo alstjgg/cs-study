@@ -31,6 +31,7 @@
 - [좋은 코드란 무엇인가](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F.md)
 - [Array와 List](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/Array%EC%99%80%20List.md)
 - [MVC 패턴이란 무엇인가?](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/MVC%20%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F.md)
+## 자료구조
 - Tree
 - Heap
 - Stack & Queue
