@@ -227,3 +227,21 @@ Life :: 13
 [https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/](https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/)
 
 [https://www.crocus.co.kr/1539](https://www.crocus.co.kr/1539)
+
+## 예상 면접 질문과 답변
+
+Q. MVC 패턴이란?
+
+A. MVC 패턴은 `Model-View-Controller` 의 약자로, 개발 과정에서 3가지 형태로 역할을 나누어 개발하는 방법론을 뜻합니다. 
+
+Q. Model, View, Controller 각각의 개념을 설명하라.
+
+A. Model은 무엇을 할지 정의하며, 비즈니스 로직에서의 알고리즘이나 데이터 등의 기능을 관리합니다. View는 무엇을 화면에 보여주는 역할을 합니다. Controller는 어떻게 할 지를 정의하며, 요청을 받아서 화면과 Model과 View를 연결해 주는 Bridge 역할을 합니다.
+
+Q. MVC 패턴의 장점은?
+
+A. 각 구성 요소를 분리함으로써 팀원이 각자 맡은 부분의 개발에만 따로 집중할 수 있게 만들어 개발의 효율성과 유저 보수성 및 확장성을 보장합니다.
+
+Q. MVC 패턴의 단점은?
+
+A. Model과 View가 서로에 대한 정보를 가지고 있지 않고 독립적이긴 하지만, 다수의 Model과 해당하는 다수의 View가 하나의 Controller를 통해 소통하므로 Model과 View의 의존성이 완벽하게 분리되지는 않습니다. 따라서 Controller 하나에 많은 Model과 View가 복잡하게 연결되어 있는 상황이 생길 수 있습니다. 이렇게 MVC가 너무 복잡하고 비대해지면, 새 기능을 추가할 때마다 코드 분석/수정/테스트가 어려워진다는 단점이 있습니다.
