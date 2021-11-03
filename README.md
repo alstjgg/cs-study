@@ -27,10 +27,17 @@
 - [RESTFul API란?](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/RESTFul%20API%EB%9E%80%3F.md)
 - [TDD란 무엇이며 어떠한 장점이 있는가](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/TDD%20%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B4%EB%A9%B0%20%EC%96%B4%EB%96%A0%ED%95%9C%20%EC%9E%A5%EC%A0%90%EC%9D%B4%20%EC%9E%88%EB%8A%94%EA%B0%80.md)
 - [객체 지향 프로그래밍이란 무엇인가](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/%EA%B0%9D%EC%B2%B4%20%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80.md)
+- [함수형 프로그래밍](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/%ED%95%A8%EC%88%98%ED%98%95%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D.md)
+- [좋은 코드란 무엇인가](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F.md)
+- [Array와 List](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/Array%EC%99%80%20List.md)
+- [MVC 패턴이란 무엇인가?](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/MVC%20%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F.md)
+- Tree
+- Heap
+- Stack & Queue
 
 ## Timeline
 |날짜| 민서 | 상우 | 지혁 | 진영
 |--|--|--|--|--|
 | 21.10.27 |Git 과 GitHub 에 대해서 | TDD 란 무엇이며 어떠한 장점이 있는가? | RESTFul API 란? | 객체 지향 프로그래밍이란 무엇인가?|
 | 21.11.03 | 함수형 프로그래밍 | 좋은 코드란 무엇인가 | Array와 List | MVC 패턴이란 무엇인가? | 
-
+| 21.11.06 | Tree | Heap | Array & List | Stack & Queue |
