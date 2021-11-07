@@ -51,7 +51,9 @@ Array에서의 인덱스는 값에 대한 유일무이한 식별자를 의미하
 
 ## 3. ArrayList
 ### 1) 정의
-- 내부적으로 Array를 사용하여 요소를 저장하는 구조
+![LinkedList,ArrayList구조차이](https://user-images.githubusercontent.com/48278519/140638866-68be5c7f-84f5-4b54-a4df-63a22f31363d.png)
+
+- 내부적으로 Array를 사용하여 요소를 저장하는 구조.
 - 배열의 "고정적 크기" 한계점을 극복하기 위해 탄생
 
 ### 2) 특징
@@ -98,20 +100,32 @@ Array에서의 인덱스는 값에 대한 유일무이한 식별자를 의미하
          add / remove 메서드가 수행될 때마다 저장 공간을 재할당 하므로, 맨 끝의 원소를 추가/삭제하는 시간복잡도 역시 O(n)이 걸림
 
 ### 4) 삽입 / 삭제 과정
-```
-// 삽입
-1. List 크기를 자료만큼 늘리는 연산 수행
-2. 삽입될 자료의 위치를 기준으로 기존 데이터들을 뒤로 혹은 앞으로 이동하는 연산 수행
-3. 해당 위치에 자료 입력
 
-// 삭제
-1. 삭제될 자료가 위치한 인덱스 자료 삭제
-2. 삭제한 자료의 인덱스 기준 이후 자료들을 앞으로 이동하는 연산 수행
-3. 맨 마지막 인덱스 및 공간 삭제
-```
+#### 삽입 
+
+![ArrayList삽입_1](https://user-images.githubusercontent.com/48278519/140638489-5c16855a-e971-40dc-a054-25836f44e9b8.png)
+
+ ① 삭제할 자료가 위치한 인덱스의 자료를 삭제한다.
+ 
+ ② 삭제한 자료의 인덱스를 기준으로 이후의 자료들을 이동하는 연산을 한다.
+ 
+ ③ List의 맨 마지막은 비어있는 상태로 완료한다.
+ 
+ #### 삭제
+![ArrayList삭제_2](https://user-images.githubusercontent.com/48278519/140638731-03901c33-375a-4f5a-b26f-f7aab372d520.png)
+
+① 삭제할 자료가 위치한 인덱스의 자료를 삭제한다.
+
+② 삭제한 자료의 인덱스를 기준으로 이후의 자료들을 이동하는 연산을 한다.
+
+③ List의 맨 마지막은 비어있는 상태로 완료한다.
+
 
 ## 4.LinkedList
 ### 1) 정의
+
+![LinkedList](https://user-images.githubusercontent.com/48278519/140638914-0400c3b3-f8ca-49a9-ba73-01e8ee88258d.png)
+
 - ArrayList의 한계(원소를 삽입 삭제시 시간 복잡도가 O(n))를 극복하기 위해 탄생했음
 - 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 방식으로 데이터를 저장하는 자료 구조
 
@@ -126,15 +140,19 @@ Array에서의 인덱스는 값에 대한 유일무이한 식별자를 의미하
         리스트 중간에 삽입/삭제 시간 복잡도는 O(n) (마찬가지로 삭입 삭제할 위치를 찾아가기 위해 순차적으로 탐색해야 하기 대문)
      
 ### 4) 삽입/삭제
-```
-// 삽입
-1. 추가할 자료의 노드를 생성
-2. 추가될 위치의 이전 node의 다음 node를 추가될 node로 설정
-3. 추가될 node의 다음 node를 추가되기 이전 node의 다음 node로 설정 
 
-//삭제
-1.삭제할 node의 이전 node의 다음 node를 삭제할 node의 다음 node로 설정
-```
+#### 삽입
+![LinkedList삽입](https://user-images.githubusercontent.com/48278519/140638759-79206101-06b1-40f9-afa6-d570ea562c3e.png)
+
+① 추가될 자료의 node를 생성한다.
+
+② 추가될 자료의 인덱스 이전 node와 추가될 자료 인덱스 이후 node를 설정한다.
+
+#### 삭제
+![LinkedLst삭제](https://user-images.githubusercontent.com/48278519/140638823-58bc3b58-5208-4d7c-870f-6148e3faf52a.png)
+
+ ① 삭제할 노드의 이전 노드와 이후 노드를 연결한다.
+
 
 ## 6. 면접 질문 정리
 ### Array와 List의 차이는 무엇인가요?
@@ -187,3 +205,4 @@ Array에서의 인덱스는 값에 대한 유일무이한 식별자를 의미하
 - https://mong9data.tistory.com/132
 - https://zorba91.tistory.com/287
 - https://devlog-wjdrbs96.tistory.com/64
+- https://shlee0882.tistory.com/95
