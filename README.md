@@ -32,13 +32,20 @@
 - [MVC 패턴이란 무엇인가?](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/MVC%20%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F.md)
 ## 자료구조
 - [Array와 List](https://github.com/alstjgg/cs-study/blob/main/%EA%B0%9C%EB%B0%9C%20%EC%83%81%EC%8B%9D/Array%EC%99%80%20List.md)
-- Tree
-- Heap
-- Stack & Queue
+- [Tree](https://github.com/alstjgg/cs-study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Tree.md)
+- [Heap](https://github.com/alstjgg/cs-study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Heap.md)
+- [Stack & Queue](https://github.com/alstjgg/cs-study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Stack%20%26%20Queue.md)
+## 네트워크
+- OSI 7 계층
+- [TCP] 3 way handshake & 4 way handshake
+## 운영체제
+- 프로세스 & 스레드
+- PCB & Context Switching
 
 ## Timeline
-|날짜| 민서 | 상우 | 지혁 | 진영
+| 날짜 | 민서 | 상우 | 지혁 | 진영 |
 |--|--|--|--|--|
 | 21.10.27 |Git 과 GitHub 에 대해서 | TDD 란 무엇이며 어떠한 장점이 있는가? | RESTFul API 란? | 객체 지향 프로그래밍이란 무엇인가?|
 | 21.11.03 | 함수형 프로그래밍 | 좋은 코드란 무엇인가 | Array와 List | MVC 패턴이란 무엇인가? | 
 | 21.11.06 | Tree | Heap | Array & List | Stack & Queue |
+| 21.11.10 | PCB & Context Switching | [TCP] 3 way handshake & 4 way handshake | 프로세스 & 스레드 | OSI 7 계층 |
