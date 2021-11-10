@@ -113,6 +113,23 @@ TCP/IP 4 계층을 통과하며 수신 측으로 데이터를 보낼 준비가 �
 
 ## 예상 질문 & 답변
 
+Q. TCP/IP이란?  
+A.
+
+Q. TCP이란?  
+A.
+
+Q. TCP/IP 4계층이란?  
+A.
+
+Q. TCP/IP 통신의 흐름을 설명해주세요.( ex. 웹 브라우저에 www.google.com을 입력한 경우)  
+A.
+
+Q. 3-way handshaking이란?  
+A.
+
+Q. 4-way handshaking이란?  
+A.
 
 ## 참고
 * stevenjlee 블로그
