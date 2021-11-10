@@ -36,11 +36,11 @@
 - [Heap](https://github.com/alstjgg/cs-study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Heap.md)
 - [Stack & Queue](https://github.com/alstjgg/cs-study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Stack%20%26%20Queue.md)
 ## 네트워크
-- OSI 7 계층
-- [TCP] 3 way handshake & 4 way handshake
+- [OSI 7 계층](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/osi%207%EA%B3%84%EC%B8%B5.md)
+- [TCP 3 way handshake & 4 way handshake](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/%5BTCP%5D%203%20way%20handshake%EC%99%80%204%20way%20handshake.md)
 ## 운영체제
-- 프로세스 & 스레드
-- PCB & Context Switching
+- [프로세스 & 스레드](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%26%20%EC%8A%A4%EB%A0%88%EB%93%9C.md)
+- [PCB & Context Switching](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/PCB%20and%20Context%20Switching.md)
 
 ## Timeline
 | 날짜 | 민서 | 상우 | 지혁 | 진영 |
