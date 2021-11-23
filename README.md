@@ -45,6 +45,7 @@
 - [PCB & Context Switching](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/PCB%20and%20Context%20Switching.md)
 - [CPU Scheduling](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/CPU%20Scheduling.md)
 - [ICP란?](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/IPC%EB%9E%80.md)
+- [Deadlock](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Deadlock.md)
 
 ## Timeline
 | 날짜 | 민서 | 상우 | 지혁 | 진영 |
