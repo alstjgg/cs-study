@@ -145,7 +145,7 @@ ChangeCipherSpec 패킷은 클라이언트와 서버 모두가 서로에게 보�
     ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa2a55557-c0f8-4ff3-a627-8daa5e3e6470%2FUntitled.png?table=block&id=9bae1ccb-9c1f-48fb-8b41-72695cb590ac&spaceId=b453bd85-cb15-44b5-bf2e-580aeda8074e&width=2000&userId=80352c12-65a4-4562-9a36-2179ed0dfffb&cache=v2)
     
 
-8. 사용자는 자신이 전달할 데이터를 1차적으로 암호화한 대칭 키를 만들고, 그 대칭 키를 사이트 공개 키로 암호화한다. (Client Key Exchange)
+8. 사용자는 자신이 전달할 데이터를 암호화 할 대칭 키를 만들고, 그 대칭 키를 사이트 공개 키로 암호화한다. (Client Key Exchange)
     
     
     ![Untitled](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9b50cbcb-a15d-4b30-8cc5-e08459644719%2FUntitled.png?table=block&id=fb962e7d-bb2e-4c83-be8c-e05bee5d8eb4&spaceId=b453bd85-cb15-44b5-bf2e-580aeda8074e&width=2000&userId=80352c12-65a4-4562-9a36-2179ed0dfffb&cache=v2)
