@@ -57,3 +57,4 @@
 | 21.11.17 | CPU Scheduling | TCP IP 흐름 제어 & 혼잡 제어 | ICP란 | HTTP & HTTPS | 
 | 21.11.24 | 데드락 | UDP | 세마포어 | TLS/SSL handshake |
 | 21.12.01 | 페이징 & 세그멘테이션 | DNS | 페이징 알고리즘 | IP vs MAC |
+| 21.12.08 | Blocking, Non-blocking & Synchronous, Asynchronous | 로드밸런싱 | 파일 시스템 | 라우팅 |
