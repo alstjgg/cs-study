@@ -40,12 +40,24 @@
 - [TCP 3 way handshake & 4 way handshake](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/%5BTCP%5D%203%20way%20handshake%EC%99%80%204%20way%20handshake.md)
 - [TCP IP 흐름 제어 & 혼잡 제어](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%20IP%20%ED%9D%90%EB%A6%84%20%EC%A0%9C%EC%96%B4%20%26%20%ED%98%BC%EC%9E%A1%20%EC%A0%9C%EC%96%B4.md)
 - [HTTP & HTTPS](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/HTTP%20%26%20HTTPS.md)
+- [TCP & UDP](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%20%26%20UDP.md)
+- [TLS & SSL Handshake](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TLS%20%26%20SSL%20Handshake.md)
+- [DNS](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/DNS.md)
+- [IP & MAC](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/IP%20%26%20MAC.md)
+- [로드밸런서](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%84%9C.md)
+- [라우팅](https://github.com/alstjgg/cs-study/blob/main/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/%EB%9D%BC%EC%9A%B0%ED%8C%85.md)
 ## 운영체제
 - [프로세스 & 스레드](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%26%20%EC%8A%A4%EB%A0%88%EB%93%9C.md)
 - [PCB & Context Switching](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/PCB%20and%20Context%20Switching.md)
 - [CPU Scheduling](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/CPU%20Scheduling.md)
 - [ICP란?](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/IPC%EB%9E%80.md)
 - [Deadlock](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Deadlock.md)
+- [뮤텍스와 세마포어](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%EB%AE%A4%ED%85%8D%EC%8A%A4%EC%99%80%20%EC%84%B8%EB%A7%88%ED%8F%AC%EC%96%B4.md)
+- [페이징 교체 알고리즘](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%ED%8E%98%EC%9D%B4%EC%A7%95%20%EA%B5%90%EC%B2%B4%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.md)
+- [Paging & Segmentation](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Paging%20%26%20Segmentation.md)
+- [Blocking, Non-blocking & Synchronous, Asynchronous](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Blocking%2C%20Non-blocking%20%26%20Synchronous%2C%20Asynchronous.md)
+- [파일시스템](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%ED%8C%8C%EC%9D%BC%EC%8B%9C%EC%8A%A4%ED%85%9C.md)
+
 
 ## Timeline
 | 날짜 | 민서 | 상우 | 지혁 | 진영 |
