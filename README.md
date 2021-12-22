@@ -70,5 +70,5 @@
 | 21.11.24 | 데드락 | UDP | 세마포어 | TLS/SSL handshake |
 | 21.12.01 | 페이징 & 세그멘테이션 | DNS | 페이징 알고리즘 | IP vs MAC |
 | 21.12.08 | Blocking, Non-blocking & Synchronous, Asynchronous | 로드밸런싱 | 파일 시스템 | 라우팅 |
-| 21.12.15 | NoSQL - 1 | Transaction & Lock - 1, 2 | 정규화 - 1 | Index - 1 |
-| 21.12.22 | NoSQL - 2 | Transaction & Lock - 3, 4 | Connection | Index - 2 |
+| 21.12.15 | NoSQL - 1 | Transaction & Lock - 1, 3 | 정규화 - 1 | Index - 1 |
+| 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 |
