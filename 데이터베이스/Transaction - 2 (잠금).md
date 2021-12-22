@@ -66,3 +66,15 @@
 
 - [https://sabarada.tistory.com/121](https://sabarada.tistory.com/121)
 - [https://chrisjune-13837.medium.com/db-lock-락이란-무엇인가-d908296d0279](https://chrisjune-13837.medium.com/db-lock-%EB%9D%BD%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-d908296d0279)
+
+# 예상 면접 질문 및 답변
+
+### Q. 잠금이란?
+
+### Q. 블로킹이란?
+
+### Q. 블로킹을 최소화할 수 있는 방법은?
+
+### Q. 교착상태(데드락)이란?
+
+### Q. 교착상태(데드락)를 해결할 수 있는 방법은?
