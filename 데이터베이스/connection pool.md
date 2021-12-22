@@ -227,7 +227,7 @@ Springboot 환경에서는 application.properties에서 간단하게 HikariCP의
 
  
  
-#### 6. 요약
+## 6. 요약
 - JDBC는 자바 어플리케이션이 데이터베이스에 접근할수 있도록 만든 JAVA에서 제공하는 API입니다.
 - 하나의 JDBC로 어떤 DBMS든 각회삭 제공하는 JDBC드라이버를 통해 연결 할 수 있습니다.
 - 커넥션 풀이란 JDBC 실행과정중에서 생성되어야할 Connection 객체를 미리만들어서 pool 이란 곳에서 저장을 해두는 기법입니다.
@@ -236,7 +236,7 @@ Springboot 환경에서는 application.properties에서 간단하게 HikariCP의
 
 
 
-### 도움이 될만한 블로그 
+## 7. 도움이 될만한 블로그 
 
 **connection pool을 사용해야 하는 이유**
 
@@ -252,9 +252,10 @@ https://jiku90.tistory.com/14
 https://kakaocommerce.tistory.com/45
 
 **질문 목록 **
+
 https://aspdotnet.tistory.com/2309
 
-### 출처
+## 8.출처
 
 https://minkwon4.tistory.com/168
 https://kimvampa.tistory.com/44
