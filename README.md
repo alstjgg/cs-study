@@ -57,6 +57,21 @@
 - [Paging & Segmentation](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Paging%20%26%20Segmentation.md)
 - [Blocking, Non-blocking & Synchronous, Asynchronous](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/Blocking%2C%20Non-blocking%20%26%20Synchronous%2C%20Asynchronous.md)
 - [파일시스템](https://github.com/alstjgg/cs-study/blob/main/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/%ED%8C%8C%EC%9D%BC%EC%8B%9C%EC%8A%A4%ED%85%9C.md)
+## 데이터베이스
+- Index
+  - [인덱스 1](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%201.md)
+  - [인덱스 2](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20-%202.md)
+- [정규화](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A0%95%EA%B7%9C%ED%99%94.md)
+- [Connection Pool](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/connection%20pool.md)
+- Transaction & Lock
+  - [트랜잭션 1 - 트랜잭션](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction%20-%201%20(%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98).md)
+  - [트랜잭션 2 - 잠금](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction%20-%202%20(%EC%9E%A0%EA%B8%88).md)
+  - [트랜잭션 3 - MySQL 엔진의 잠금](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction%20-%203%20(MySQL%20%EC%97%94%EC%A7%84%EC%9D%98%20%EC%9E%A0%EA%B8%88).md)
+  - [트랜잭션 4 - MySQL 스토리지 엔진의 잠금](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Transaction%20-%204%20(MySQL%20%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%20%EC%97%94%EC%A7%84%EC%9D%98%20%EC%9E%A0%EA%B8%88).md)
+- NoSQL
+  - [NoSQL 1 - What are Data Models](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%201.%20What%20are%20Data%20Models.md)
+  - [NoSQL 2 - What is NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%202.%20What%20is%20NoSQL.md)
+  - [NoSQL 3 - Why NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%203.%20Why%20NoSQL.md)
 
 
 ## Timeline
@@ -71,4 +86,5 @@
 | 21.12.01 | 페이징 & 세그멘테이션 | DNS | 페이징 알고리즘 | IP vs MAC |
 | 21.12.08 | Blocking, Non-blocking & Synchronous, Asynchronous | 로드밸런싱 | 파일 시스템 | 라우팅 |
 | 21.12.15 | NoSQL - 1 | Transaction & Lock - 1, 3 | 정규화 - 1 | Index - 1 |
-| 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 |
+| 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 ||
+| 21.12.29 | NoSQL - 3 | Transaction & Lock - 5 | Connection | Index - 3 |
