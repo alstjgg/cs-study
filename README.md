@@ -88,3 +88,4 @@
 | 21.12.15 | NoSQL - 1 | Transaction & Lock - 1, 3 | 정규화 - 1 | Index - 1 |
 | 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 ||
 | 21.12.29 | NoSQL - 3 | Transaction & Lock - 5 | Connection | Index - 3 |
+| 22.01.05 | 하둡 | Spring @Transactional | SQL 최적화 - 1 | Index - 4 |
