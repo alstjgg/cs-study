@@ -836,6 +836,7 @@ NL 조인 방식은 필연적으로 데이터 접근 시 인덱스에 의한 랜
   
 
 ## 출처
+ 업무에 바로 쓰는 sql튜닝 
  https://yzink.tistory.com/48 
  https://thefif19wlsvy.tistory.com/26 https://jeong-pro.tistory.com/239 
 https://jmkim.tistory.com/40
