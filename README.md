@@ -91,4 +91,4 @@
 | 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 |
 | 21.12.29 | NoSQL - 3 | Transaction & Lock - 5 | Connection | Index - 3 |
 | 22.01.05 | 하둡 | Spring @Transactional | SQL 최적화 - 1 | Index - 4 |
-| 22.01.12 | Docker | MySQL 아키텍처 | SQL 최적화 - 2 | MySQL의 옵티마이저 - 1 |
+| 22.01.12 | kafka | MySQL 아키텍처 | SQL 최적화 - 2 | MySQL의 옵티마이저 - 1 |
