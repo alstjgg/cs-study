@@ -837,15 +837,15 @@ NL 조인 방식은 필연적으로 데이터 접근 시 인덱스에 의한 랜
 
 ## 출처
  업무에 바로 쓰는 sql튜닝 
- https://yzink.tistory.com/48 
- https://thefif19wlsvy.tistory.com/26 https://jeong-pro.tistory.com/239 
-https://jmkim.tistory.com/40
-https://velog.io/@fortice/MySQL-MySQL-%EC%97%94%EC%A7%84-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-2
- https://reeme.tistory.com/54 
-https://jaehoney.tistory.com/31
- https://devuna.tistory.com/36 
-https://bangu4.tistory.com/83
- https://dbguide.tistory.com/entry/MySQL-56-join-Issue
-https://mozi.tistory.com/222
-https://hoon93.tistory.com/46
-https://lotuus.tistory.com/48
+-  https://yzink.tistory.com/48 
+- https://thefif19wlsvy.tistory.com/26 https://jeong-pro.tistory.com/239 
+- https://jmkim.tistory.com/40
+- https://velog.io/@fortice/MySQL-MySQL-%EC%97%94%EC%A7%84-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-2
+-  https://reeme.tistory.com/54 
+- https://jaehoney.tistory.com/31
+- https://devuna.tistory.com/36 
+-  https://bangu4.tistory.com/83
+- https://dbguide.tistory.com/entry/MySQL-56-join-Issue
+- https://mozi.tistory.com/222
+- https://hoon93.tistory.com/46
+- https://lotuus.tistory.com/48
