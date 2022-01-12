@@ -73,6 +73,7 @@ EXPLAIN SELECT * FROM table1 WHERE table1_id = 25;
 - 인덱스에서 필요한 부분만 선택하여 스캔하는 방식
 - 인덱스 범위 스캔처럼 넓은 범위에 전부 접근하지 않고, WHERE 조건문 기준으로 필요한 데이터와 불필요한 데이터를 구분한 뒤 불필요한 인덱스 키는 무시
 - 보통 GROUP BY, MAX(), MIN() 함수 포함 시 동작
+- 
 ![10](https://user-images.githubusercontent.com/48278519/149135824-82b965a7-02ef-4fa4-a9ab-53bc316e9ef4.png)
 
 
@@ -92,6 +93,7 @@ EXPLAIN SELECT * FROM table1 WHERE table1_id = 25;
 - 물리적으로 인접한 페이지를 순차적으로 읽는 방식
 - 데이터를 찾고자 이동하는 디스크 헤더의 움직임을 최소화하여 작업시간과 리소스 점유 시간을 줄일 수 있음.
 - 테이블 풀 스캔이 동작하는 방식 
+
 ![12](https://user-images.githubusercontent.com/48278519/149135857-48c0f3fc-98e1-4710-9ac8-b0bd2d9ac120.png)
 
 <br>
@@ -100,6 +102,7 @@ EXPLAIN SELECT * FROM table1 WHERE table1_id = 25;
 - 물리적으로 떨어진 페이지를 임의로 접근하는 방식
 - 디스크 헤더에 많은 움직임을 요구하여, 데이터 접근 시간이 오래 걸림.
 - 접근 범위를 줄이는 방식으로 튜닝이 필요할 수 있음.
+
 ![13](https://user-images.githubusercontent.com/48278519/149135880-34f3e7d7-73ca-4b37-8252-301a95fff157.png)
 
  <br>
@@ -130,12 +133,11 @@ EXPLAIN SELECT * FROM table1 WHERE table1_id = 25;
 # 4.응용 용어        
 
 ##  1) 선택도(selectivity) 
-- **테이블의 특정 열을 기준으로 해당 열의 조건절 (WHERE 절 조건문)에 따라 선택되는 데이터 비율88
+- **테이블의 특정 열을 기준으로 해당 열의 조건절 (WHERE 절 조건문)에 따라 선택되는 데이터 비율**
 - 해당 열에 중복되는 데이터가 많다면 '선택도가 높다' / 해당 열에 중복되는 데이터가 적으면 '선택도가 낮다'
 - 낮은 선택도가 대용량 데이터에서 원하는 데이터만 골라 낼 수 있기 때문에 낮은 선택도를 가지는 열은 데이터를 조회하는 SQL 문에서 원하는 데이터를 빨리 찾기 위한 인덱스 열을 생성할 때 주요 고려대상 
-`` 
-- 선택도 = 선택한 데이터 건수 ÷ 전체 데이터 건수 
-- 일반화된 선택도 = 1 ÷ DISTINCT(COUNT 열 명) ``
+- ```선택도 = 선택한 데이터 건수 ÷ 전체 데이터 건수```
+- ```일반화된 선택도 = 1 ÷ DISTINCT(COUNT 열 명)```
 
 ex) 학생 테이블로 기본 키인 학번 열과 이름, 성별이라는 일반 열로 구성되어 있고, 총 100건의 데이터가 저장되어 있을 때
 
@@ -181,9 +183,9 @@ ex) 전체 데이터가 100건인 테이블에서 기본키가 학번인 열을 
 학번 열의 카디널리티는 100 × 0.01 = 1건 (모든 학번의 데이터값이 고유한 만큼 1건의 데이터만 출력되리라 예측 가능)
 
 ex2)  일상생활에서의 카디널리티 적용 사례
-• 주민등록번호: 카디널리티 높음
-• 이름 카디널리티 중간
-• 성별: 카디널리티 낮음
+- 주민등록번호: 카디널리티 높음
+- 이름 카디널리티 중간
+- 성별: 카디널리티 낮음
 
  <br>
  
@@ -202,17 +204,16 @@ ex2)  일상생활에서의 카디널리티 적용 사례
 
 예를 들어, 이름 열에 대한 학생_idx01 인덱스, 전공코드 열에 대한 학생_idx2 인덱스, 학생 테이블이 존재한다. 
 
-'''sql
+```sql
 SELECT 학번, 전공 코드
 FROM 학생
 WHERE 이름 = '유재석';
-'''
+```
 
 위의 쿼리 실행 시, '유재석'이라는 이름의 학생 정보를 가져오기 때문에 학생_IDX01인덱스를 이용하면 원하는 데이터를 빨리 찾을 수 있을 것
-<br>
-=> 학생_IDX01 인덱스를 활용하여 찾아달라는 힌트를 작성할 수 있다.
+=> **학생_IDX01 인덱스를 활용하여 찾아달라는 힌트를 작성할 수 있다.**
 
-'''sql
+```sql
 SELECT 학번, 전공코드
 FROM 학생 /*! USE INDEX (학생_IDX01) */
 WHERE 이름 = '유재석';
@@ -221,7 +222,7 @@ WHERE 이름 = '유재석';
 SELECT 학번, 전공코드
 FROM 학생 USE INDEX (학생_IDX01)
 WHERE 이름 = '유재석';
-'''
+```
 
 ## Hint의 종류
 
@@ -231,7 +232,7 @@ WHERE 이름 = '유재석';
 - JPA(hibernate)에서 사용이 불가능하기 때문에 JdbcTemplate 등을 이용하여 Native Query로 활용해야 된다.
 
  **사용 방법**
- '''sql
+```sql
 TABLE_NAME [[AS] ALIAS] INDEX_HINT INDEX_LIST
 
 INDEX_LIST:
@@ -244,7 +245,7 @@ INDEX_LIST:
 
 INDEX_LIST:
     INDEX_NAME , INDEX_NAME ...
- '''
+```
  
 - **USE 키워드** : 특정 인덱스를 사용하도록 권장
 - **IGNORE 키워드** : 특정 인덱스를 사용하지 않도록 지정
@@ -254,7 +255,7 @@ INDEX_LIST:
 - **USE INDEX FOR GROUP BY** : 명시된 인덱스를 GROUP BY 용도로만 사용하도록 제한
 
 **예시**
-'''sql
+```sql
 SELECT * 
 FROM TABLE1 
   USE INDEX (COL1_INDEX, COL2_INDEX)
@@ -271,7 +272,7 @@ FROM TABLE3
   IGNORE INDEX (COL2_INDEX) FOR ORDER BY
   IGNORE INDEX (COL3_INDEX) FOR GROUP BY
 WHERE COL1=1 AND COL2=2 AND COL3=3;
-'''
+```
 
 ### 2) 옵티마이저 힌트
 
@@ -286,63 +287,56 @@ WHERE COL1=1 AND COL2=2 AND COL3=3;
   - 인덱스: 힌트가 테이블 내의 특정 인덱스에만 영향을 줌
   
  **사용 방법**
+
 옵티마이저 힌트는 /+ .... /주석 내에 지정해야 한다.
+|hint|설명|적용 범위|
+|---|---|---|
+|BKA, NO_BKA|	일괄 처리된 키 액세스 조인 처리에 영향|	쿼리 블록, 테이블|
+|BNL, NO_BNL|	MySQL 8.0.20 이전: 블록 중첩-루프 조인 처리, MySQL 8.0.18 이상: 해시 조인 최적화, MySQL 8.0.20 이상: 해시 조인 최적화에만 영향|	쿼리 블록, 테이블|
+|DERIVED_CONDITION_PUSHDOWN, NO_DERIVED_CONDITION_PUSHDOWN|	구체화된 파생 테이블에 대한 파생 조건 푸시다운 최적화 사용 또는 무시(MySQL 8.0.22에 추가)|쿼리 블록, 테이블|
+|GROUP_INDEX, NO_GROUP_INDEX| GROUP BY 작업(MySQL 8.0.20에 추가)에서 인덱스 검색에 대해 지정된 인덱스를 사용하거나 무시 |인덱스|
+|HASH_JOIN, NO_HASH_JOIN| 해시 조인 최적화에 영향 (MySQL8.0.18만 해당) |쿼리 블록, 테이블|
+|INDEX, NO_INDEX| JOIN_INDEX, GROUP_INDEX 및 ORDER_INDEX의 조합으로 작동하거나 NO_JOIN_INDEX, NO_GROUP_INDEX 및 NO_ORDER_INDEX(MySQL 8.0.20에 추가)의 조합으로 작동| 인덱스|
+|INDEX_MERGE, NO_INDEX_MERGE|인덱스 병합 최적화에 영향|테이블, 인덱스|
+|JOIN_INDEX, NO_JOIN_INDEX| 모든 액세스 방법에 대해 지정된 인덱스 또는 인덱스를 사용하거나 무시(MySQL 8.0.20에 추가) |인덱스|
+|JOIN_FIXED_ORDER| FROM절에 지정된 순서대로(FIXED) 테이블을 조인하도록 지시 |쿼리 블록|
+|JOIN_ORDER|	가능하다면 힌트에 지정된 순서대로 조인하도록 지시|	쿼리 블록|
+|JOIN_PREFIX|	가장 먼저 조인을 시작 할 테이블 지정|	쿼리 블록|
+|JOIN_SUFFIX|	가장 마지막으로 조인 할 테이블 지정|	쿼리 블록|
+|MAX_EXECUTION_TIME|	구문 실행 시간 제한|	전역 범위|
+|MERGE, NO_MERGE|	외부 쿼리 블록으로 병합되는 파생 테이블/뷰에 영향| 테이블|
+|MRR, NO_MRR|	다중 범위 읽기 최적화에 영향|	테이블, 인덱스|
+|NO_ICP|	인덱스 조건 푸시다운 최적화에 영향|	테이블, 인덱스|
+|NO_RANGE_OPTIMIZATION|	범위 최적화에 영향|	테이블, 인덱스|
+|ORDER_INDEX, NO_ORDER_INDEX|	행을 정렬하기 위해 지정된 인덱스 또는 인덱스 사용하거나 또는 무시(MySQL 8.0.20에 추가)| 인덱스|
+|QB_NAME| 쿼리 블록에 이름 할당|	쿼리 블록|
+|RESOURCE_GROUP| 구문을 실행하는 동안 리소스 그룹 설정|	전역 범위|
+|SEMIJOIN, NO_SEMIJOIN|	Semijoin 전략에 영향, MySQL 8.0.17부터는 anti조인에도 적용|	쿼리 블록|
+|SKIP_SCAN, NO_SKIP_SCAN| 스킵 검색 최적화에 영향 |테이블, 인덱스|
+|SET_VAR| 구문을 실행하는 동안 변수 설정| 전역 범위|
+|SUBQUERY| 구체화에 영향, IN-to-EXISTS 하위 쿼리 전략 |쿼리 블록|
 
-BKA, NO_BKA	일괄 처리된 키 액세스 조인 처리에 영향	쿼리 블록, 테이블
-BNL, NO_BNL	MySQL 8.0.20 이전: 블록 중첩-루프 조인 처리, MySQL 8.0.18 이상: 해시 조인 최적화, MySQL 8.0.20 이상: 해시 조인 최적화에만 영향	쿼리 블록, 테이블
-DERIVED_CONDITION_PUSHDOWN, NO_DERIVED_CONDITION_PUSHDOWN	구체화된 파생 테이블에 대한 파생 조건 푸시다운 최적화 사용 또는 무시(MySQL 8.0.22에 추가)	쿼리 블록, 테이블
-GROUP_INDEX, NO_GROUP_INDEX	GROUP BY 작업(MySQL 8.0.20에 추가)에서 인덱스 검색에 대해 지정된 인덱스를 사용하거나 무시	인덱스
-HASH_JOIN, NO_HASH_JOIN	해시 조인 최적화에 영향 (MySQL8.0.18만 해당)	쿼리 블록, 테이블
-INDEX, NO_INDEX	JOIN_INDEX, GROUP_INDEX 및 ORDER_INDEX의 조합으로 작동하거나 NO_JOIN_INDEX, NO_GROUP_INDEX 및 NO_ORDER_INDEX(MySQL 8.0.20에 추가)의 조합으로 작동	인덱스
-INDEX_MERGE, NO_INDEX_MERGE	인덱스 병합 최적화에 영향	테이블, 인덱스
-JOIN_INDEX, NO_JOIN_INDEX	모든 액세스 방법에 대해 지정된 인덱스 또는 인덱스를 사용하거나 무시(MySQL 8.0.20에 추가)	인덱스
-JOIN_FIXED_ORDER	FROM절에 지정된 순서대로(FIXED) 테이블을 조인하도록 지시	쿼리 블록
-JOIN_ORDER	가능하다면 힌트에 지정된 순서대로 조인하도록 지시	쿼리 블록
-JOIN_PREFIX	가장 먼저 조인을 시작 할 테이블 지정	쿼리 블록
-JOIN_SUFFIX	가장 마지막으로 조인 할 테이블 지정	쿼리 블록
-MAX_EXECUTION_TIME	구문 실행 시간 제한	전역 범위
-MERGE, NO_MERGE	외부 쿼리 블록으로 병합되는 파생 테이블/뷰에 영향	테이블
-MRR, NO_MRR	다중 범위 읽기 최적화에 영향	테이블, 인덱스
-NO_ICP	인덱스 조건 푸시다운 최적화에 영향	테이블, 인덱스
-NO_RANGE_OPTIMIZATION	범위 최적화에 영향	테이블, 인덱스
-ORDER_INDEX, NO_ORDER_INDEX	행을 정렬하기 위해 지정된 인덱스 또는 인덱스 사용하거나 또는 무시(MySQL 8.0.20에 추가)	인덱스
-QB_NAME	쿼리 블록에 이름 할당	쿼리 블록
-RESOURCE_GROUP	구문을 실행하는 동안 리소스 그룹 설정	전역 범위
-SEMIJOIN, NO_SEMIJOIN	Semijoin 전략에 영향, MySQL 8.0.17부터는 anti조인에도 적용	쿼리 블록
-SKIP_SCAN, NO_SKIP_SCAN	스킵 검색 최적화에 영향	테이블, 인덱스
-SET_VAR	구문을 실행하는 동안 변수 설정	전역 범위
-SUBQUERY	구체화에 영향, IN-to-EXISTS 하위 쿼리 전략	쿼리 블록
-
-
-/*+ BKA(table1) */ 
-
-/*+ BNL(table1, table2) */
-
-/*+ NO_RANGE_OPTIMIZATION(table3 PRIMARY) */
-
-/*+ QB_NAME(queryblock1) */
-
-SELECT /*+ BNL(t1) BKA(t2) */ ...
-// 하나의 쿼리 블록에서 여러 힌트를 사용할 땐, 하나의 힌트 주석안에 여러개의 힌트를 선언하여 사용해야 한다.
-// 즉, SELECT /*+ BNL(t1) */ /* BKA(t2) */ ... 는 안됨.
 옵티마이저 힌트는 SELECT, UPDATE, INSERT, REPLACE, DELETE문에서 아래와 같이 사용할 수 있다.
 
+```sql
 SELECT /*+ HINT */ ...
 INSERT /*+ HINT */ ...
 REPLACE /*+ HINT */ ...
 UPDATE /*+ HINT */ ...
 DELETE /*+ HINT */ ...
- 
+```
+
 ### 3) 조인 순서 최적화 힌트
 
 - MySQL 8.0은 이후 버전에서 제공하는 Optimizer hint 중 하나로, 옵티마이저가 테이블을 조인하는 순서에 영향을 준다.
 
 **사용 방법**
-'''sql
+
+```sql
 HINT_NAME([@query_block_name])
 HINT_NAME([@query_block_name] TABLE_NAME [, tbl_name] ...)
 HINT_NAME(TABLE_NAME[@query_block_name] [, TABLE_NAME[@query_block_name]] ...)
-'''
+```
 
 - HINT_NAME에 올 수 있는 조인 순서 최적화 힌트는 4가지가 있다.
   - **JOIN_FIXED_ORDER**: FROM절에 지정된 순서대로(FIXED) 테이블을 조인하도록 지시 (STRAIGHT_JOIN의 힌트화)
@@ -353,7 +347,7 @@ HINT_NAME(TABLE_NAME[@query_block_name] [, TABLE_NAME[@query_block_name]] ...)
 TABLE_NAME에 별칭이 있는 경우 힌트는 테이블 이름이 아니라 별칭을 참조해야 한다.
 
 **예시**
-'''sql
+```sql
 SELECT
 /*+ JOIN_PREFIX(t2, t5@subq2, t4@subq1)
     JOIN_ORDER(t4@subq1, t3)
@@ -369,9 +363,9 @@ t4@subq1 : 쿼리 블록 subq1의 테이블 t4를 지정
 /*+ JOIN_PREFIX(t2, t5@subq2, t4@subq1)
 JOIN_ORDER(t4@subq1, t3)
  JOIN_SUFFIX(t1) */
- '''
+```
  
- ### 4. 콜레이션(COLLATION)
+ ## 4. 콜레이션(COLLATION)
 - 데이터베이스에서 검색이나 정렬과 같은 작업을 할 때 사용하는 비교를 위한 규칙의 집합
 - CHAR, VARCHAR, TEXT 등의 문자열 Datatype에는 문자셋(Character set)과 콜레이션(Collation) 속성이 있다.
 - 문자셋(Character set)은 각 문자가 컴퓨터에 저장될 때 어떠한 '코드'로 저장될지에 대한 규칙의 집합을 의미하며 콜레이션(Collation)은 특정 문자 셋에 의해 데이터베이스에 저장된 값들을 비교 검색하거나 정렬 등의 작업을 위해 문자들을 서로 '비교' 할때 사용하는 규칙들의 집합을 의미한다.
@@ -380,125 +374,125 @@ JOIN_ORDER(t4@subq1, t3)
 - MySQL의 경우 utf8-general-ci 가 Default Collation이다.
 ![17](https://user-images.githubusercontent.com/48278519/149136203-daf7eb28-65b2-45d0-b7e1-1ac1e7083d3b.png)
 
- 
 
-### 5. 통계 정보
+## 5. 통계 정보
 
 ### 정의 
-- 데이터베이스 마다 고유하게 존재하는 쿼리의 최적화와 실행계획을 작성하는 비용기반의 옵티마이저(Optimizer)가 참조하는 정보
-- 쿼리의 실행 계획을 최적화하기 위해서는 현재 데이터 저장 상태를 확인할 정보가 필요하며, 이러한 수집된 정보를(통계정보) 토대로 옵티마이저는 최적의 실행계획을 세운다. RDS나 최근 버전의 옵티마이저는 대부분 비용기반(CBO)를 사용을 하기 때문에 통계정보도 매우 중요한 DB 관리요소이다. 통계정보가 정확하지 않는다면 전혀 다른 방향으로 쿼리가 실행될 수 있기 때문이다.(ex, 1억 건의 레코드가 저장된 테이블의 통계 정보가 갱신되지 않아 레코드가 10건 미만인 것처럼 돼 있다면 옵티마이저는 인덱스 레인지 스캔(Index Range Scan)이 아니라 테이블을 처음부터 끝까지 읽는 풀테이블 스캔(Full Table Scan)으로 실행해 버릴 수도 있을 것이다. 이런 부정확한 통계 정보 탓에 매우 빠르게 끝나는 쿼리가 느리게 소요될 수도 있다.)
+- **데이터베이스 마다 고유하게 존재하는 쿼리의 최적화와 실행계획을 작성하는 비용기반의 옵티마이저(Optimizer)가 참조하는 정보**
+- 쿼리의 실행 계획을 최적화하기 위해서는 현재 데이터 저장 상태를 확인할 정보가 필요하며, 이러한 수집된 정보를(통계정보) 토대로 옵티마이저는 최적의 실행계획을 세운다. 
+- RDS나 최근 버전의 옵티마이저는 대부분 비용기반(CBO)를 사용을 하기 때문에 통계정보도 매우 중요한 DB 관리요소이다.
+- 통계정보가 정확하지 않는다면 전혀 다른 방향으로 쿼리가 실행될 수 있기 때문이다.
+(ex, 1억 건의 레코드가 저장된 테이블의 통계 정보가 갱신되지 않아 레코드가 10건 미만인 것처럼 돼 있다면 옵티마이저는 인덱스 레인지 스캔(Index Range Scan)이 아니라 테이블을 처음부터 끝까지 읽는 풀테이블 스캔(Full Table Scan)으로 실행해 버릴 수도 있을 것이다. 이런 부정확한 통계 정보 탓에 매우 빠르게 끝나는 쿼리가 느리게 소요될 수도 있다.)
 
 ### 테이블 통계 정보
 
--**MySQL 5.5 이전 버전** : 각 테이블의 통계 정보가 메모리에서만 관리 되었고, SHOW INDEX 명령어로만 테이블의 인덱스 컬럼의 분포도를 확인 가능 -> 통계 정보가 메모리에서 관리될 경우, 서버가 재시작 되면 지금까지 수집된 통계 정보가 사라지기 때문에 재수집이 필요
+- **MySQL 5.5 이전 버전** : 각 테이블의 통계 정보가 메모리에서만 관리 되었고, SHOW INDEX 명령어로만 테이블의 인덱스 컬럼의 분포도를 확인 가능 -> 통계 정보가 메모리에서 관리될 경우, 서버가 재시작 되면 지금까지 수집된 통계 정보가 사라지기 때문에 재수집이 필요
 - **MySQL 5.6 이후 버전** : 각 테이블의 통계정보를 mysql 데이터베이스(스키마) 의 innodb_index_stats 와 innodb_table_stats 테이블로 관리 할 수 있게 개선 -> InnoDB 스토리지 엔진을 사용하는 테이블에 대한 통계 정보를 영구적으로 관리
-- **옵션값 설정** :
+- **옵션값 설정** : 테이블을 생성 시  STATS_PERSISTENT 옵션을 설정할 수 있다.
 
-테이블을 생성 시  STATS_PERSISTENT 옵션을 설정할 수 있다.
-
-'''sql
+```sql
 mysql> CREATE TABLE tb_test(
 id int,
 col varchar(100),
 PRIMARY KEY(id))
 ENGINE=InnoDB
 STATS_PERSISTENT={ DEFAULT | 0 | 1 }
-'''
+```
 
-**• STATS_PERSISTENT=0**
+- **STATS_PERSISTENT=0** :
+ 테이블의 통계 정보를 mysql 데이터베이스의 innodb_index_stats 와 innodb_table_stats 에 저장 X
 
-테이블의 통계 정보를 mysql 데이터베이스의 innodb_index_stats 와 innodb_table_stats 에 저장 X
-
-**• STATS_PERSISTENT=1**
-
+- **STATS_PERSISTENT=1** : 
 테이블의 통계 정보를 mysql 데이터베이스의 innodb_index_stats 와 innodb_table_stats 에 저장
 
-**• STATS_PERSISTENT=DEFAULT**
+- **STATS_PERSISTENT=DEFAULT** :
+-  테이블을 생성할 때 STATS_PERSISTENT 구문을 생략하게 되면 선택되는 값. innodb_stats_persistent 설정 값을 따라가게 되고 해당 시스템 변수의 기본값은 ON 
 
-테이블을 생성할 때 STATS_PERSISTENT 구문을 생략하게 되면 선택되는 값. innodb_stats_persistent 설정 값을 따라가게 되고 해당 시스템 변수의 기본값은 ON 
+**예시:**
 
-
-- 예시 : 
-```select * from mysql.innodb_table_stats;```
-
-- **database_name** : 데이터베이스 네임
-- **table_name** : 테이블 이름 ,파티션 이름 또는 서브 파티션
-- **last_update** : 이 행을 마지막으로 업데이트한 시간을 나타내는 시간
-- **n_rows** : 테이블의 전체 레코드 수
-- **clustered_index_size** : Primary Key 의 크기(InnoDB 페이지 개수). 
-- **sum_of_other_index_sizes** : PK를 제외한 인덱스의 크기(InnoDB 페이지 개수)
-*(Note) innodb_table_stats.sum_of_other_index_sizes 값은 테이블의 STATS_AUTO_RECAL 옵션에 따라 0으로 보일 수 있다. 이럴 경우 ANALYZE TABLE 명령어를 사용하면 통계값이 반영된다.
+```sql
+select * from mysql.innodb_table_stats;
+```
+ - **database_name** : 데이터베이스 네임
+ - **table_name** : 테이블 이름 ,파티션 이름 또는 서브 파티션
+ - **last_update** : 이 행을 마지막으로 업데이트한 시간을 나타내는 시간
+ - **n_rows** : 테이블의 전체 레코드 수
+ - **clustered_index_size** : Primary Key 의 크기(InnoDB 페이지 개수). 
+ - **sum_of_other_index_sizes** : PK를 제외한 인덱스의 크기(InnoDB 페이지 개수)
+ *(Note) innodb_table_stats.sum_of_other_index_sizes 값은 테이블의 STATS_AUTO_RECAL 옵션에 따라 0으로 보일 수 있다. 이럴 경우 ANALYZE TABLE 명령어를 사용하면 통계값이 반영된다.
  
 
 ### 인덱스 통계 정보
 - mysql.innodb_index_stats 에 저장되는 인덱스에 관한 통계 정보
 
-'''SQL
+```sql
 select * from mysql.innodb_index_stats;
-'''
+```
 
-- **stat_name** : stat_value열에 값이 보고되는 통계 이름 
+**stat_name** : stat_value열에 값이 보고되는 통계 이름 
   - 'n_diff_pfx%' : 인덱스가 가진 유니크한 값의 개수
   - 'n_leaf_page' : 인덱스 리프 노드의 페이지 수
   - size : 인덱스 트리에 전체 페이지수
 (primary eky인덱스의 경우, 두 개의 n_diff%행이 있고, 행 수는 인덱스의 열 수와 같다. 고유하지 않은 인덱스의 경우 InnoDB는 기본키 열을 추가한다)
 
-- **stat_value** :  stat_name열에 이름이 지정된 통계 값 
-- **sample_size** : start_value 열에 제공된 견적에 대해 샘플링 된 페이지 수
-- **stat_description** : stat_name 열에 명명 된 통계 설명
+**stat_value** :  stat_name열에 이름이 지정된 통계 값 
 
+**sample_size** : start_value 열에 제공된 견적에 대해 샘플링 된 페이지 수
+
+**stat_description** : stat_name 열에 명명 된 통계 설명
 
 **예시2 ) 인덱스 크기 검색**
-'''SQL
+
+```sql
 -- 인덱스 크기 검색 
 mysql > SELECT SUM(stat_value) pages, index_name, SUM(stat_value)* @@innodb_page_size size
 		FROM nysql.innodb_index_stats WHERE table_name = 't1'
         AND stat_name = 'size' GROUP BY index_name;
- '''
+```
 
 <br>
 
 # 5-2. 통계 정보 갱신 및 수집
 
 ## 자동 갱신
- • 테이블이 새로 오픈되는 경우
- • 테이블의 레코드가 대량으로 변경되는 경우(테이블의 전체 레코드 중에서 1/6 정도의 DML이 실행되는 경우)
- • ANALYZE TABLE 명령어가 실행 되는 경우
- • SHOW TABLE STATUS 명령이나 SHOW INDEX FROM 명령이 실행되는 경우
- • InnoDB 모니터가 활성화된 경우
- • innodb_stats_on_metadata 설정이 ON 인상태에서 SHOW TALBE STATUS 명령이 실행되는 경우
+ - 테이블이 새로 오픈되는 경우
+ -  테이블의 레코드가 대량으로 변경되는 경우(테이블의 전체 레코드 중에서 1/6 정도의 DML이 실행되는 경우)
+ -  ANALYZE TABLE 명령어가 실행 되는 경우
+ -  SHOW TABLE STATUS 명령이나 SHOW INDEX FROM 명령이 실행되는 경우
+ -  InnoDB 모니터가 활성화된 경우
+ -  innodb_stats_on_metadata 설정이 ON 인상태에서 SHOW TALBE STATUS 명령이 실행되는 경우
+ 
+위의 경우 통계정보는 자동갱신이 된다. 테이블의 통계정보가 갱신이 되게 되면 즉 플랜이 의도치 않게 변경이 될 수도 있다. 이 때 변수값을 변경하여 통계 정보가 자동으로 갱신되는 것을 막을 수 있다.
 
-테이블의 통계정보가 갱신이 되게 되면 즉 플랜이 의도치 않게 변경이 될 수도 있다. 이 때 변수값을 변경하여 통계 정보가 자동으로 갱신되는 것을 막을 수 있다.
 
-
-**• STATS_AUTO_RECALC=1**
+- **STATS_AUTO_RECALC=1** :
 테이블의 통계정보를 자동 수집 하며 테이블의 데이터가 약 10% 가 변경 될 때 통계가 다시 수집
 
-**• STATS_AUTO_RECALC=0**
+- **STATS_AUTO_RECALC=0** :
 테이블의 통계정보를 자동 수집을 비활성화
 
-**• STATS_AUTO_RECALC=DEFAULT**
+- **STATS_AUTO_RECALC=DEFAULT** :
 테이블의 통계정보를 자동 수집 여부를 innodb_stats_auto_recalc 시스템 변수의 값으로 결정( innodb_stats_auto_recalc 시스템 변수의 기본값은 ON)
-            
+           
 
 ## 통계 수집
 - 통계 정보를 수집 할 때 몇개의 InnoDB 테이블 블록을 샘플링 할지를 결정하는 옵션
 
-**• innodb_stats_transient_sample_pages**
+### innodb_stats_transient_sample_pages
 - 자동으로 통계 정보 수집이 실행될 때 '변수'개의 페이지만 임의로 샘플링 및 분석하여 결과를 통계정보로 활용하겠다는 의미 (기본값 : 8) 
 -  innodb_stats_persistent 시스템 변수가 비활성화 된 경우 적용
 
-**• innodb_stats_persistent_sample_pages**
+### innodb_stats_persistent_sample_pages
 - ANALYZE TABLE 명령이 실행되면 임의로 '변수'개 페이지만 샘플링 및 분석하여 결과를 영구적인 통계 정보 테이블에 저장 및 활용하겠다는 의미 (기본값 : 20)
 - innodb_stats_persistent 시스템 변수가 활성화 된 경우 적용
 - 더 정확한 통계 정보를 수집하고자 한다면 시스템 변수에 높은 값을 설정하면 조금 더 정확한 통계 정보를 수집할 수는 있지만, 통계를 수집 할때 I/O 증가 와 통계 정보 수집 시간이 길어질 수 있으므로 변수값은 적절한 설정이 필요하다.
 
-**• information_schema_stats_expiry **
+
+### information_schema_stats_expiry
 -  MySQL 8.0이후 추가된 변수 
 -  information_schema_stats_expiry 변수에 지정된 시간 제한만큼 캐시를 TABLES 에 저장
 
- '''sql
- 
+```sql
 예시1 ) MySQL 5.7
 
 mysql> select count(*) from tb_test;
@@ -559,9 +553,9 @@ mysql> select table_name,table_rows,avg_row_length
 +------------+------------+----------------+
 | tb_test    |      0     |        0       |
 +------------+------------+----------------+
- '''
+```
 
-'''sql
+```sql
 예시2 ) MySQL 8.0
 
 -- MySQL 8.0
@@ -632,7 +626,7 @@ mysql> select table_name,n_rows,clustered_index_size,
 +------------+--------+----------------------+--------------------------+
 | tb_test    |   0    |           1          |            0             |
 +------------+--------+----------------------+--------------------------+
- '''
+```
  
 - 기본적으로 MySQL은 mysql.index_stats 및 mysql.table_stats 딕셔너리의 컬럼이 조회 될때 캐시된 값을 검색한다.(스토리지 엔진에서 직접 통계를 검색하는 것보다 더 효율적이기 때문)
 
