@@ -74,6 +74,9 @@
   - [NoSQL 1 - What are Data Models](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%201.%20What%20are%20Data%20Models.md)
   - [NoSQL 2 - What is NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%202.%20What%20is%20NoSQL.md)
   - [NoSQL 3 - Why NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%203.%20Why%20NoSQL.md)
+- 빅데이터
+  - [Hadoop](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Hadoop.md)
+  - [Kafka 1 - What is Kafka](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Kafka%201%20-%20What%20is%20Kafka.md)
 
 
 ## Timeline
@@ -91,4 +94,4 @@
 | 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 |
 | 21.12.29 | NoSQL - 3 | Transaction & Lock - 5 | Connection | Index - 3 |
 | 22.01.05 | 하둡 | Spring @Transactional | SQL 최적화 - 1 | Index - 4 |
-| 22.01.12 | kafka | MySQL 아키텍처 | SQL 최적화 - 2 | Elasticsearch - 1 |
+| 22.01.12 | Kafka - 1 | MySQL 아키텍처 | SQL 최적화 - 2 | Elasticsearch - 1 |
