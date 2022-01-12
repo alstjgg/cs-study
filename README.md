@@ -94,4 +94,5 @@
 | 21.12.22 | NoSQL - 2 | Transaction & Lock - 2, 4 | Connection | Index - 2 |
 | 21.12.29 | NoSQL - 3 | Transaction & Lock - 5 | Connection | Index - 3 |
 | 22.01.05 | 하둡 | Spring @Transactional | SQL 최적화 - 1 | Index - 4 |
-| 22.01.12 | Kafka - 1 | MySQL 아키텍처 | SQL 최적화 - 2 | Elasticsearch - 1 |
+| 22.01.12 | Kafka - 1 | MySQL 아키텍처 - 1 | SQL 최적화 - 2 | Elasticsearch - 1 |
+| 22.01.19 | Kafka - 2 | MySQL 아키텍처 - 2 | SQL 최적화 - 3 | Elasticsearch - 2 |
