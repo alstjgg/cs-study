@@ -74,7 +74,7 @@
   - [NoSQL 1 - What are Data Models](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%201.%20What%20are%20Data%20Models.md)
   - [NoSQL 2 - What is NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%202.%20What%20is%20NoSQL.md)
   - [NoSQL 3 - Why NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%203.%20Why%20NoSQL.md)
-- 빅데이터
+- 데이터 분산 처리
   - [Hadoop](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Hadoop.md)
   - [Kafka 1 - What is Kafka](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Kafka%201%20-%20What%20is%20Kafka.md)
 
