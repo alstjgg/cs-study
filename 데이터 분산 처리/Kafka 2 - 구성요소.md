@@ -5,7 +5,7 @@
 - Publisher와 Subscriber로 이루어진 pub/sub model을 사용하는 메세징 시트템
 - 실시간 메세지 처리(event streaming) 플랫폼
   
-  ![]()
+  ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c1001740-2404-4b73-b438-994b98329a0b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.17.54.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T115952Z&X-Amz-Expires=86400&X-Amz-Signature=2671751df6ce03863e3b959d0474ce57eaba16af6ff2cd52eb49c0a9201579a7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25204.17.54.png%22&x-id=GetObject)
     
 - 원천 시스템으로부터 **대규모 트랜잭션 데이터**가 발생했을 때 **중간에 데이터를 버퍼링**하면서 **타깃 시스템에 안정적으로 전송**해주는 강력한 기능과 아키텍처를 제공하는 미들웨어
 
@@ -90,7 +90,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
     - 트럭 수천대의 위치 정보가 실시간 스트림 형태로 들어온다
     - 각 트럭은 고유 truck_id, 그리고 현재 위치 정보를 Kafka로 보낸다 *(producer)*
     
-      ![]()
+      ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8d716c27-6fdf-4ed6-9337-94dcbb0dac10/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.38.09.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120010Z&X-Amz-Expires=86400&X-Amz-Signature=a3fc71b6c5b440315d30cfd2a14bd6155d213ba66237747ca92c8286a1f16ea3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25204.38.09.png%22&x-id=GetObject)
     
     - 해당 topic을 생성할 때 partition 갯수는 10개로 하기로 했다 *(임의 필수 지정)*
     - 이를 이용해 각 트럭이 어디 위치해 있는지 보여주는 대시보드와 알림 서비스를 개발하고자 한다 *(consumer)*
@@ -120,7 +120,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
 
 - **Topic-A (3 Partitions) & Topic-B (2 Partitions)**
     
-    ![]()    
+    ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f585ae90-7099-4b2f-b792-9f54c1831b0d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.47.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120022Z&X-Amz-Expires=86400&X-Amz-Signature=c424dd2d82bad67bc8f48a997b59939ef8969ef315180440d1d731c096a045b0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25204.47.47.png%22&x-id=GetObject)    
 
 # Topic Replication
 
@@ -130,7 +130,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
 
 - **Topic-A (2 Partition, Replication Factor=2)**
     
-    ![]()
+    ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/82efcb34-ab54-421d-a1c8-2386b162287e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.20.34.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120029Z&X-Amz-Expires=86400&X-Amz-Signature=28868c09a30c0a334ec6f6d62b48da8cb1f064410461f3c77179c662934a69e5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25205.20.34.png%22&x-id=GetObject)
     
     - Broker 102가 실패하여도 같은 데이터가 Broker 101과 Broker 103에 저장되어 있기 때문에 문제 없다
     - 결론적으로 데이터는 손실되지 않고 서비스는 지속된다
@@ -143,7 +143,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
     - **Leader**만이 해당 partition에 대해 데이터를 receive하고 serve할 수 있다
     - **Follower**는  leader의 데이터를 동기화(synchronize)한다
         
-      ![]()
+      ![](https://media.vlpt.us/images/jaehyeong/post/c9d43455-6b4a-4ab4-bd33-2202d4809698/img.jpg)
       
         **⇒ 하나의 partition은 하나의 leader와 다수의 ISR를 가진다**
         
@@ -181,7 +181,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
         
     - 어떤 broker의 어떤 partition에 데이터를 전송할지 알고 있다 (key를 지정해주지 않아도 알아서 publish 진행)
     
-    ![]()
+    ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/bd7ad36a-9c1c-429d-bba9-5ca717da22b8/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.40.49.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120105Z&X-Amz-Expires=86400&X-Amz-Signature=20ee490b4e52f457e623b85bd83070b116e10db049773fdfbd6e9c9ba4b8054c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25205.40.49.png%22&x-id=GetObject)
     
 - **Acknowlegment**
     - Producer는 Data 전송 이후 메세지를 받을지 정할 수 있다
@@ -230,7 +230,7 @@ Partition을 통해 다수의 producer가 publish하는 메세지에 대한 처�
 
 ## 예시
 
-![]()
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76a1b894-6e11-41cc-8b3f-1e8185d9eace/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-16_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.09.40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120116Z&X-Amz-Expires=86400&X-Amz-Signature=2c356e61fe0c5fccc4ee74d5e3fbf794a5dcf618ab3d159dd760224a86d05461&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-16%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25206.09.40.png%22&x-id=GetObject)
 
 - Topic-A를 partition 3로 지정
 - consumer-group-application-1
@@ -320,7 +320,7 @@ Cluster 내의 하나의 broker와 연결이 된다면 모든 broker와 연결�
 - Kafka client가 이 cluster와 연결하고자 한다
     - kafka client → producer or consumer
 
-![]()
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3eea90c7-05ab-4e39-88ea-b65aaba22cd6/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.56.03.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120133Z&X-Amz-Expires=86400&X-Amz-Signature=760bfb91fce60ccaf4afeaa93887ae3d2ed49489a046d183f6d8302ecf59145d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-17%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25207.56.03.png%22&x-id=GetObject)
 
 1. **Connection + Metadata request**
     - Broker 101과 연결한다
@@ -363,7 +363,7 @@ Cluster 내의 하나의 broker와 연결이 된다면 모든 broker와 연결�
 - 3개의 서버를 가진 zookeeper *(홀수)*
 - 5개의 broker를 관리
 
-![]()
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/92d09adb-e041-42ec-90ed-869836cee73b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.08.41.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T120145Z&X-Amz-Expires=86400&X-Amz-Signature=165f240c5b7504003fa4d3e7737ab09b1246ab7946f2f6bf2889578d9ea8b3d5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-17%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25208.08.41.png%22&x-id=GetObject)
 
 - Kafka cluster와 zookeeper cluster가 연결되어 있다
 
@@ -382,7 +382,7 @@ Cluster 내의 하나의 broker와 연결이 된다면 모든 broker와 연결�
 
 ![https://media.vlpt.us/images/jaehyeong/post/96498ed8-7e67-4f2e-a53b-15b4a4f62db8/Untitled%206.png](https://media.vlpt.us/images/jaehyeong/post/96498ed8-7e67-4f2e-a53b-15b4a4f62db8/Untitled%206.png)
 
-![]()
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/baac9280-c802-4614-aaa5-cc4632e44f8c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.18.23.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220117T115925Z&X-Amz-Expires=86400&X-Amz-Signature=9ee2f30aac413944964c0f7580822cb770caeee17de3c5c54354bcda600a8d7a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA%25202022-01-17%2520%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE%25208.18.23.png%22&x-id=GetObject)
 
 # 출처
 
