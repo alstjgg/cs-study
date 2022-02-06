@@ -74,9 +74,13 @@
   - [NoSQL 1 - What are Data Models](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%201.%20What%20are%20Data%20Models.md)
   - [NoSQL 2 - What is NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%202.%20What%20is%20NoSQL.md)
   - [NoSQL 3 - Why NoSQL](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/NoSQL%20-%203.%20Why%20NoSQL.md)
-- 데이터 분산 처리
-  - [Hadoop](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Hadoop.md)
-  - [Kafka 1 - What is Kafka](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Kafka%201%20-%20What%20is%20Kafka.md)
+ 
+ ## 데이터 분산 처리
+- [Hadoop](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Hadoop.md)
+- [Kafka 1 - What is Kafka](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/Kafka%201%20-%20What%20is%20Kafka.md)
+- [Kafka 2 - 구성요소](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Kafka%202%20-%20%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C.md)
+- [Kafka 3 - 사용](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Kafka%203%20-%20%EC%82%AC%EC%9A%A9.md)
+- [Data Architecture & Pipeline](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Data%20Architecture%20%26%20Pipeline.md)
 
 
 ## Timeline
