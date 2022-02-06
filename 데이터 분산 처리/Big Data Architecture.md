@@ -1,14 +1,8 @@
-# Data Pipeline
+# What is Big Data Architecture
 
-많은 단체들은 인사이트 도출이나 미래 계획 수립 등을 위한 대시보드나 그래프들을 생성하고자 **데이터 분석을 한다**. 이러한 결과물들을 생성해내기 위해 데이터 근원에서 생성된 raw data는 복잡한 과정을 거쳐 수집되고 정제된다. 데이터 파이프라인은 **데이터 분석을 위한 일련의 데이터 처리 과정**이다.
+빅 데이터 아키텍처는 데이터 분석 목적으로 빅 데이터를 수집하고 처리하기 위한 가장 중요한 시스템이다.
 
-데이터 파이프라인은 **①source**(데이터 근원), **②sink**(데이터 목적지), **③steps**(사이 과정)으로 이루어져 있다. Source와 sink는 같을 수도 있으며, 여러개일 수도 있다. 데이터가 특정 지점에서 다른 지점으로 이동/변경될 때, 그 사이에는 데이터 파이프라인이 있는 것이다.
-
-구체적인 목적을 가진 애플리케이션들(microservice)의 집합이 커지면서, 그 내부에서 데이터를 처리하는 과정의 효율성과 애플리케이션이나 작업들간의 의존도를 확실하게 하는 것은 아주 중요해졌다.
-
-# Big Data Architecture
-
-## Big Data Architecture의 필요성
+# Big Data Architecture의 필요성
 
 데이터 양이 많아지고 데이터 베이스 시스템이 커지고 복잡해지면서, 데이터의 수집, 처리 및 분석 과정을 관리하고 담당할 수 있는 여러가지 도구들이 발전했다.
 
@@ -19,23 +13,21 @@
 - 빅데이터 대화형 탐색
 - 예측 분석 및 기계 학습
 
-즉, 복잡해지는 데이터 파이프라인을 구조화하기 위해 데이터 아키텍처가 등장한 것이다.
+# Data Architecture 예시
 
-## Data Architecture 예시
-
-### Batch-based
+## Batch-based
 
 ![https://hazelcast.com/wp-content/uploads/2021/12/24_DataPipleline-1.png](https://hazelcast.com/wp-content/uploads/2021/12/24_DataPipleline-1.png)
 
 **배치 처리**를 위한 구조
 
-### Streaming
+## Streaming
 
 ![https://hazelcast.com/wp-content/uploads/2021/12/18_StreamingDataPipeline-800x377-1.png](https://hazelcast.com/wp-content/uploads/2021/12/18_StreamingDataPipeline-800x377-1.png)
 
 **실시간 처리**를 위한 구조
 
-### Lambda Architecture
+## Lambda Architecture
 
 ![Lambda Architecture](http://blog.skby.net/blog/wp-content/uploads/2019/01/1-49.png)
 
@@ -55,7 +47,7 @@ Lambda Architecture
 2. 범용성, 확장성, 결함 허용성
 3. 전송 지연 최소화, 분석 결과 일관성, 고성능, 정확성
 
-### Kappa Architecture
+## Kappa Architecture
 
 람다 아키텍처의 단점은 복잡하다는 것이다. 두 가지 경로로 데이터가 들어오기 때문에 두 가지 프레임워크가 사용되며, 이로 인해 중복된 계산 논리와 두 가지 아키텍처 관리가 필요해진다.
 
@@ -67,7 +59,7 @@ Kappa Architecture
 
 람다 아키텍처와 목표는 같지만, 모든 데이터가 스트림 처리 시스템을 사용하여 단일 경로를 따라 흐른다는 차이점이 있으며, 스피드와 서빙 레이어로만 구성되어 있다.
 
-### Lambda/Kappa Architecture 구현을 위한 도구 예시
+## Lambda/Kappa Architecture 구현을 위한 도구 예시
 
 ![Hadoop Ecosystem](https://mblogthumb-phinf.pstatic.net/MjAyMDA4MjFfMTg5/MDAxNTk3OTc1MDUzNDk4.NSBoo0nLGYgVBKswHLlB1dXqDVAoTWa_XkvQlVP6CMQg.N40MKjZGV3aYIgPSeCp0bRKLjPyp1BdOLFvs0pMP4Cgg.PNG.acornedu/%ED%95%98%EB%91%A1%EC%9D%98_%EC%83%9D%ED%83%9C%EA%B3%84.png?type=w800)
 
@@ -100,7 +92,7 @@ Hadoop Ecosystem
 - Impala
 - Presto
 
-## Big Data Architecture 구성 요소
+# Big Data Architecture 구성 요소
 
 ![https://docs.microsoft.com/ko-kr/azure/architecture/data-guide/big-data/images/big-data-pipeline.png](https://docs.microsoft.com/ko-kr/azure/architecture/data-guide/big-data/images/big-data-pipeline.png)
 
