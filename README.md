@@ -101,5 +101,5 @@
 | 22.01.05 | 하둡 | Spring @Transactional | SQL 최적화 - 1 | Index - 4 |
 | 22.01.12 | Kafka - 1 | MySQL 아키텍처 - 1 | SQL 최적화 - 2 | Elasticsearch - 1 |
 | 22.01.19 | Kafka - 2 | MySQL 아키텍처 - 2 | SQL 최적화 - 3 | Elasticsearch - 2 |
-| 22.01.26 | Kafka - 3 | MySQL 아키텍처 - 3 | SQL 최적화 - 4 | Redis - 1 |
-| 22.02.09 | Big Data Atchitecture | MySQL의 리플리케이션 - 1 | SQL 최적화 - 5 | Redis - 2 |
+| 22.01.26 | Kafka - 3 | MySQL 아키텍처 - 3 | SQL 최적화 - 4 | Redis |
+| 22.02.09 | Big Data Atchitecture | MySQL의 리플리케이션 - 1 | SQL 최적화 - 5 | Msa 아키텍처 |
