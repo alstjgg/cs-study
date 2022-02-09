@@ -95,7 +95,7 @@ WHERE SUBSTRING(사원번호,1,4) = 1100
 ![7](https://user-images.githubusercontent.com/48278519/153126984-a30aa2b7-46ed-42ce-9c77-163aacb10d3d.png)
 
 
-### # Tunning
+### # Tuning
 - 기본키인 사원번호 접근 시 WHERE 절에서 가공하여 접근
 => Table Full Scan이 발생 (type = 'ALL')
 
@@ -127,7 +127,7 @@ group by IFNULL(성별, 'NO DATA')
 ![9](https://user-images.githubusercontent.com/48278519/153127422-d270cfbd-df44-4f84-97f7-fcf5b587cb83.png)
 - key 항목이 "I_성별_성" INDEX로 나타나므로 INDEX FULL SCAN으로 수행되었으며, Extra 방식이 "Using temporary"이므로 임시테이블을 생성
 
-### # Tunning 
+### # Tuning 
 - 사원 테이블의 성별에는 NULL값이 존재하지 않고 M / F 만 저장됨
 - 사원 테이블의 구조를 보면 성별은 NOT NULL 조건이 있음
 => ```현재 IFNULL()함수를 처리하기 위해 DB 내부적으로 별도의 임시테이블을 만들면서 null여부를 검사하려 했지만, 이는 불필요한 함수이다.```
@@ -164,7 +164,7 @@ where 사용여부 = 1
 - filtered 항목이 10.00이므로 MySQL 엔진으로 가져온 데이터 중 10%를 추출해서 최종 데이터를 출력함
 
 
-### # Tunning
+### # Tuning
 ![12](https://user-images.githubusercontent.com/48278519/153127802-6da209ff-f4d5-4432-bd91-e574e1528233.png)
 - 총 50만 건의 데이터가 있고, 사용 여부 열에는 0, 1, ' '데이터가 있음
 - 사용여부 열 값이 '1'인 데이터는 전체 데이터 대비 10%이하
@@ -212,7 +212,7 @@ where concat(성별,' ',성) = 'M Radwan';
 - type 항목이 ALL로 테이블 풀 스캔으로 접근(rows : 약 30만개)
 
 
-### # Tunning
+### # Tuning
 ![17](https://user-images.githubusercontent.com/48278519/153128124-07ec06b4-1e26-4192-b3b8-a421a6100ade.png)
 - 인덱스인 I_성별_성 인덱스를 사용할 수 있고, 조건문도 동등조건이므로, 인덱스를 활용하여 조회가 가능한 쿼리
 
@@ -251,7 +251,7 @@ join 부서관리자
 - Extra : Using temporary (distinct를 수행하고자 별도의 임시테이블 생성)
 
 
-### # Tunning
+### # Tuning
 - 사원 테이블의 primary key는 '사원번호'이므로, select 절의 사원.사원번호 에는 중복 데이터가 존재하지 않음<br>
 => ```distinct 키워드로 정렬작업 후 중복 제거하는 작업은 불필요함```<br>
 (참고 : distinct 키워드는 나열될 열들을 정렬한 뒤 중복 데이터는 삭제한다. 따라서 distinct를 쿼리에 작성하는 것만으로도 정렬 작업이 포함됨을 인지해야 함)
@@ -294,7 +294,7 @@ where 성별 = 'F'
 - 이 때, 임시 테이블을 생성하게 됨. 만약 메모리에 상주하기 어려울 만큼 id = 1,2의 결과량이 많다면 메모리가 아닌 임시 파일을 생성할 수 도 있다.
 
 
-### # Tunning
+### # Tuning
 ![22](https://user-images.githubusercontent.com/48278519/153128894-8234337a-48c6-4b52-afef-4dd0a4eeb969.png)
 - where 절의 성별 / 성 컬럼이 동등 조건으로 작성되어 있으므로, I_성별_성 index로 빠르게 조회 가능
 - 또한 union 연산으로 통합하는 과정에서 두 결과를 합친 후 중복제거를 하지만 이미 사원번호라는 기본키가 출력되는 SQL문에서 중복제거는 불필요
@@ -336,7 +336,7 @@ group by 성, 성별
 - I_성별_성 index의 구성 컬럼이 group by 절에 포함되므로, 테이블 접근 없이 인덱스만 사용하는 커버링 인덱스(Using Index)로 수행
 
 
-### # Tunning
+### # Tuning
 - 인덱스를 활용하는데도 메모리나 디스크에 임시테이블을 꼭 생성해야 하는지에 대한 고민이 필요 (인덱스만으로 count연산을 수행할 수 있다면 임시테이블은 필요가 없을 것)<br>
 => I_성별_성 index는 성별 컬럼 기준으로 정렬 후 성 컬럼으로 정렬되었다는 의미이므로, 인덱스 순서 활용 가능
 
@@ -372,7 +372,7 @@ where 입사일자 LIKE '1989%'
 - 스토리지 엔진으로부터 기본 키를 구성하는 사원번호를 조건으로 데이터를 가져온 뒤, MySQL 엔진에서 남은 필터 조건(입사일자 like '1989%')으로 추출하기 때문에 filtered가 11.11%가 나옴
 
 
-### # Tunning
+### # Tuning
 ![27](https://user-images.githubusercontent.com/48278519/153129653-8dcdf5df-ec9e-43e0-a63c-50c2d62fc960.png)
 - 전체 데이터 개수는 약 30만개
 - 입사일자 like '1918%'을 만족하는 데이터 개수는 28394개
@@ -412,7 +412,7 @@ where 출입문 = 'B';
 ![29](https://user-images.githubusercontent.com/48278519/153130005-76a020f9-ef79-461c-9fd4-b814db4cac61.png)
 
 
-### # Tunning
+### # Tuning
 ![30](https://user-images.githubusercontent.com/48278519/153130036-42c9f4f8-ad76-4b26-89f4-b9b36da972b8.png)
 - 사원출입기록 테이블 중 출입문 B는 총 66만건 데이터 중 30만건을 차지하므로 전체 데이터의 50%<br>
 => 앞의 실행계획에 따르면 I_출입문 index로 index scan을 수행하는데, ```전체 데이터의 약 50%에 달하는 데이터를 조회하기 위해 인덱스를 활용하는 것은 효율적이지 않을 수 있다.```
@@ -453,7 +453,7 @@ where 입사일자 between STR_TO_DATE ('1994-01-01', '%Y-%m-%d')
 - Extra의 Using MRR : 인덱스가 랜덤 액세스가 아닌 순차 스캔으로 처리
 
 
-## # Tunning
+## # Tuning
 - 사원 테이블 데이터는 총 30만건인데 결과값은 4만건으로, 인덱스 스캔으로 랜덤 엑세스 부하 발생
 - 입사일자 열 기준으로 매 번 1994~2000년의 데이터를 조회하는 경우가 잦다면, 랜덤 액세스의 부하가 발생하도록 하기보단 테이블 풀 스캔 방식으로 설정하는 것이 효율적일 수 있음
 
@@ -493,7 +493,7 @@ where 매핑.부서번호 = 부서.부서번호
 - 상대적으로 큰 크기의 부서사원매핑 테이블은 I_부서번호 index로 index scan 수행( 4만건의 행을 인덱스 스캔을 하고 랜덤 엑세스로 테이블에 접근)
 
 
-### # Tunning
+### # Tuning
 - 위의 실행 예시처럼 드리븐 테이블에서 대량 데이터에 랜덤 액세스시 비효율적
 - 부서사원_매핑 테이블에 30만 건 이상의 데이터를 MySQL 엔진으로 가져온 모든 데이터에 대해 where 절의 필터 조건(매핑.시작일자) 수행하기 때문에 **매핑.시작일자 조건절을 먼저 적용할 수 있다면 조인 시 비교 대상 줄어듬**
 
@@ -535,7 +535,7 @@ where 사원번호 > 450000
 - 사원테이블은 primary key를 활용해서 index range scan 수행, 그 후 급여 테이블은 외부 테이블인 사원테이블로부터 조건을 전달받아 수행하는 의존 서브 쿼리(dependent subquery)로 수행 
 
 
-### # Tunning
+### # Tuning
 - select_type 항목에 DEPENDENT 키워드가 있으면, 외부 테이블에서 조건절을 받은 뒤 처리되어야 하므로 튜닝 대상으로 고려
 - 외부 테이블인 사원 테이블의 사원 정보를 서브쿼리 대신 조인으로 변경
 
@@ -581,7 +581,7 @@ where 사원.사원번호 = 기록.사원번호
 - 사원 테이블은 primary key를 사용해서 조인 조건절인 사원번호 컬럼으로 데이터 비교하기 때문에 type 항목에 eq_ref로 표시 
 
 
-### # Tunning
+### # Tuning
 ```sql
 select count(distinct 기록.사원번호) as 데이터건수
  from 사원,
