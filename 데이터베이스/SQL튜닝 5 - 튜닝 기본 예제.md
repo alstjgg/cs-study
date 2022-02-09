@@ -515,7 +515,7 @@ select straight_join
 
 
 ### # Conculusion
-- ```작은 테이블이 먼저 조인에 참여하지 않도록 한다.````
+- ```작은 테이블이 먼저 조인에 참여하지 않도록 한다.```
 
 <br>
 <br>
@@ -639,5 +639,6 @@ where exists ( select 1
 <br>
 <br>
 <br>
+	
 # 5. 출처
 - 업무에 바로 쓰는 SQL 튜닝
