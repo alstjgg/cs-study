@@ -105,5 +105,7 @@
 | 22.02.09 | Big Data Atchitecture |  | SQL 최적화 - 5 | Msa 아키텍처 - 1 |
 | 22.02.16 | Data Pipeline | MySQL의 리플리케이션 | SQL 최적화 - 6 |  |
 
-## 
-| 22.02.23 |  |  | Paging & Segmentation |  |
+## 복습
+| 날짜 | 민서 | 상우 | 지혁 | 진영 |
+|--|--|--|--|--|
+| 22.02.23 | osi 7계층 | 네트워크 | Paging & Segmentation |  |
