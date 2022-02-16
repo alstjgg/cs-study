@@ -81,7 +81,7 @@
 - [Kafka 2 - 구성요소](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Kafka%202%20-%20%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C.md)
 - [Kafka 3 - 사용](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Kafka%203%20-%20%EC%82%AC%EC%9A%A9.md)
 - [Big Data Architecture](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Data%20Architecture%20%26%20Pipeline.md)
-- [Data Pipeline]()
+- [Data Pipeline](https://github.com/alstjgg/cs-study/blob/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%82%B0%20%EC%B2%98%EB%A6%AC/Data%20Pipeline.md)
 
 
 ## Timeline
@@ -102,5 +102,8 @@
 | 22.01.12 | Kafka - 1 | MySQL 아키텍처 - 1 | SQL 최적화 - 2 | Elasticsearch - 1 |
 | 22.01.19 | Kafka - 2 | MySQL 아키텍처 - 2 | SQL 최적화 - 3 | Elasticsearch - 2 |
 | 22.01.26 | Kafka - 3 | MySQL 아키텍처 - 3 | SQL 최적화 - 4 | Redis |
-| 22.02.09 | Big Data Atchitecture | MySQL의 리플리케이션 - 1 | SQL 최적화 - 5 | Msa 아키텍처 - 1 |
-| 22.02.16 | Data Pipeline | MySQL의 리플리케이션 - 1 | SQL 최적화 - 6 | Msa 아키텍처 - 2 |
+| 22.02.09 | Big Data Atchitecture |  | SQL 최적화 - 5 | Msa 아키텍처 - 1 |
+| 22.02.16 | Data Pipeline | MySQL의 리플리케이션 | SQL 최적화 - 6 |  |
+
+## 
+| 22.02.23 |  |  |  |  |
