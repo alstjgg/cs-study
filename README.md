@@ -106,4 +106,4 @@
 | 22.02.16 | Data Pipeline | MySQL의 리플리케이션 | SQL 최적화 - 6 |  |
 
 ## 
-| 22.02.23 |  |  |  |  |
+| 22.02.23 |  |  | Paging & Segmentation |  |
