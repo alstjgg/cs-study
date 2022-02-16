@@ -115,7 +115,7 @@ Airflow는 크게 3가지 구성요소로 이루어져 있다.
     - 스케쥴러가 파싱한 DAG를 시각화
     - 모니터링을 위한 인터페이스 제공
 
-![]()
+![](https://github.com/alstjgg/cs-study/blob/main/images/datapipeline_airflow_structure.png?raw=true)
 
 *Aieflow를 이용한 data pipeline 구축 및 실행*
 
@@ -125,7 +125,7 @@ Airflow는 크게 3가지 구성요소로 이루어져 있다.
 
 Airflow에서는 실행 결과 모니터링을 위한 웹 인터페이스를 제공하고 있다
 
-![]()
+![](https://github.com/alstjgg/cs-study/blob/main/images/datapipeline_airflow_treeview.png?raw=true)
 
 각 workflow DAG를 한눈에 확인할 수 있는 graph view 뿐만 아니라 tree view를 통해 실행 이력도 한눈에 확인할 수 있다*DAG tree view*
 
@@ -175,7 +175,7 @@ Operator는 실제 작업을 위한 코드가 구현되어 있으며, airflow는
 
 Task는 이러한 operator의 실행을 돕는 일종의 wrapper와 같은 역할을 한다.
 
-![]()
+![](https://github.com/alstjgg/cs-study/blob/main/images/datapipeline_aiarflow_dag.png?raw=true)
 
 사용자는 operator의 구현에 신경을 쓰면 되고, airflow는 task가 제대로 실행되는지 신경쓴다.
 
