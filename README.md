@@ -108,4 +108,5 @@
 ## 복습
 | 날짜 | 민서 | 상우 | 지혁 | 진영 |
 |--|--|--|--|--|
-| 22.02.23 | osi 7계층 | 네트워크 | Paging & Segmentation |  |
+| 22.02.23 | osi 7계층 | ElasticSearch | Memory |  |
+| 22.03.02 | 프로세스와 뮤텍스 & 세마포아 | HTTP & HTTPS & TLS & SSL Handshake | Paging & Segmentation |  |
